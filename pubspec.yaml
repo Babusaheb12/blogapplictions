@@ -1,0 +1,84 @@
+name: blogapplictions
+description: Professional Flutter Blog Application
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # ---------------- STATE MANAGEMENT ----------------
+  flutter_bloc: ^9.1.1
+  equatable: ^2.0.7
+
+  # ---------------- API ----------------
+  dio: ^5.9.0
+
+  # ---------------- FIREBASE ----------------
+  firebase_core: ^4.1.0
+  firebase_auth: ^6.0.2
+  firebase_messaging: ^16.2.0
+  cloud_firestore: ^6.3.0
+
+  # ---------------- GOOGLE SIGN IN ----------------
+  google_sign_in: ^7.1.1
+
+  # ---------------- LOCAL STORAGE ----------------
+  shared_preferences: ^2.5.3
+
+  # ---------------- INTERNET ----------------
+  connectivity_plus: ^7.0.0
+
+  # ---------------- UI ----------------
+  shimmer: ^3.0.0
+  cached_network_image: ^3.4.1
+  flutter_html: ^3.0.0
+
+  # ---------------- SHARE ----------------
+  share_plus: ^12.0.0
+
+  # ---------------- UTILS ----------------
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  # ---------------- ASSETS ----------------
+  assets:
+    - assets/images/
+    - assets/icon/
+    - assets/fonts/
+    - assets/sounds/
+
+  # ---------------- FONTS ----------------
+  fonts:
+
+    - family: DM Sans
+      fonts:
+        - asset: assets/fonts/DM_Sans/static/DMSans-Regular.ttf
+        - asset: assets/fonts/DM_Sans/static/DMSans-Bold.ttf
+          weight: 700
+
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito/static/Nunito-Regular.ttf
+        - asset: assets/fonts/Nunito/static/Nunito-Bold.ttf
+          weight: 700
+
+    - family: NunitoSans
+      fonts:
+        - asset: assets/fonts/Nunito_Sans/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf
