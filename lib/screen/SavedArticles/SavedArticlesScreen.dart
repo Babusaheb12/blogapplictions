@@ -55,18 +55,13 @@ class _SavedArticlesScreenState extends State<SavedArticlesScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: const Icon(Icons.menu, color: Color(0xFF003399)),
+        automaticallyImplyLeading: false,
         title: const Text(
           'InsightBlog',
           style: TextStyle(color: Color(0xFF2D62ED), fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 16.0),
-            child: Icon(Icons.notifications_none_outlined, color: Color(0xFF003399)),
-          ),
-        ],
+
       ),
       body: StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ArticleDetailScreen extends StatelessWidget {
   final Map<String, dynamic> post;
@@ -45,7 +46,10 @@ class ArticleDetailScreen extends StatelessWidget {
                       backgroundColor: Colors.white.withOpacity(0.8),
                       child: IconButton(
                         icon: const Icon(Icons.share, color: Colors.black),
-                        onPressed: () {},
+                        onPressed: () {
+                          final url = post['url'] ?? '';
+                          Share.share('Read this post: ${post['title'] ?? 'No Title'}${url.isNotEmpty ? '\n\n$url' : ''}');
+                        },
                       ),
                     ),
                   ),
@@ -185,7 +189,10 @@ class ArticleDetailScreen extends StatelessWidget {
           IconButton(icon: const Icon(Icons.bookmark_border), onPressed: () {}),
           const Spacer(),
           ElevatedButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              final url = post['url'] ?? '';
+              Share.share('Read this post: ${post['title'] ?? 'No Title'}${url.isNotEmpty ? '\n\n$url' : ''}');
+            },
             icon: const Icon(Icons.share, size: 18),
             label: const Text("Share"),
             style: ElevatedButton.styleFrom(

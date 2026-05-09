@@ -1,5 +1,6 @@
 import 'package:blogapplictions/Api/FirebaseFCMService.dart';
 import 'package:blogapplictions/Api/shared_preference.dart';
+import 'package:blogapplictions/screen/Profile/bloc/logout/logout_bloc.dart';
 import 'package:blogapplictions/screen/auth/LoginScreen/LoginScreen.dart';
 import 'package:blogapplictions/screen/auth/LoginScreen/bloc/sigUpBloc/sig_up_bloc.dart';
 import 'package:blogapplictions/screen/homepage/Bloc/home_bloc.dart';
@@ -39,8 +40,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<SigUpBloc>(create: (context) => SigUpBloc()),
-        BlocProvider<HomeBloc>(create: (context) => HomeBloc()..add(FetchPosts())),
+        BlocProvider<SigUpBloc>(
+          create: (context) => SigUpBloc(),
+        ),
+
+        BlocProvider<HomeBloc>(
+          create: (context) => HomeBloc()..add(FetchPosts()),
+        ),
+        // BlocProvider<UpdateprofileBloc>(
+        //   create: (context) => UpdateprofileBloc(),
+        // ),
+        BlocProvider<LogoutBloc>(
+          create: (context) => LogoutBloc(),
+        ),
       ],
       child: MaterialApp(
 

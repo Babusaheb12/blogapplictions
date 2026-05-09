@@ -46,6 +46,8 @@ dependencies:
 
   # ---------------- UTILS ----------------
   intl: ^0.20.2
+  image_picker: ^1.2.2
+  firebase_storage: ^13.3.0
 
 dev_dependencies:
   flutter_test:
